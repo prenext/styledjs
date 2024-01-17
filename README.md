@@ -58,6 +58,8 @@ const MyComponent = () => {
   );
 };
 ```
+![image](https://github.com/Alidante254/styled-tsx/assets/117439552/9ca069fe-a130-4292-baa1-515826a64069)
+
 ## Customization
 All components in this library support customization through styled-components' prop-based styling. Refer to the documentation for each component to learn about available props and customization options.
 
