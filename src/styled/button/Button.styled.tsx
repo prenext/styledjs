@@ -26,12 +26,14 @@ import styled from "styled-components";
 interface StyledButtonProps {
   color?: string;
   radius?: number;
+  font?: string;
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
   background-color: transparent;
   color: ${({ color, theme }) => color || theme.text};
   padding: 5px 10px;
+  font-family: ${({ font, theme }) => font || theme.fontFamily};
   border-radius: ${({ radius, theme }) =>
     typeof radius === "number" ? `${radius}px` : `${theme.radius}px`};
   border: none;
