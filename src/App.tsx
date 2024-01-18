@@ -5,25 +5,43 @@ import {
   Theme,
   ElevatedButton,
   OutlinedButton,
+  Heading,
+  Text,
+  Title,
+  Highlight,
+  Marked,
+  Paragraph,
+  Subtitle,
 } from "./index";
 
 const App = () => {
   return (
     <Theme
-      themeType="light"
-      primaryColor="purple"
-      secondaryColor="pink"
+      themeType="dark"
+      primaryColor="green"
+      secondaryColor="lightGreen"
       defaultRadius={15}
       child={
         <>
-          <h1>Elevated Button</h1>
-          <ElevatedButton>Elevated Button</ElevatedButton>
-          <h1>Outlined Button</h1>
-          <OutlinedButton>Outlined Button</OutlinedButton>
-          <h1>Primary Button</h1>
-          <PrimaryButton>Primary Button</PrimaryButton>
-          <h1>Secondary Button</h1>
-          <SecondaryButton>Secondary Button</SecondaryButton>
+          <Text>A Text Component</Text>
+
+          <Heading level={1} align="center">
+            <ElevatedButton>Elevated Button</ElevatedButton>
+            <OutlinedButton>Outlined Button</OutlinedButton>
+            <PrimaryButton>Primary Button</PrimaryButton>
+            <SecondaryButton>Secondary Button</SecondaryButton>
+          </Heading>
+          <Heading level={1}>Heading 1</Heading>
+          <Heading level={2}>Heading 2</Heading>
+          <Heading level={3}>Heading 3</Heading>
+          <Heading level={4}>Heading 4</Heading>
+          <Heading level={5}>Heading 5</Heading>
+          <Heading level={6}>Heading 6</Heading>
+          <Title>This is a Title</Title>
+          <Subtitle size={1.2}>Subtitle with custom size</Subtitle>
+          <Paragraph font="cursive">A paragraph with cursive font</Paragraph>
+          <Highlight>Highlighted Text</Highlight>
+          <Marked>Marked Text</Marked>
         </>
       }
     />

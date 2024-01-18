@@ -41,12 +41,13 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Color } from "types/Color";
 
 interface ThemeProps {
-  child: ReactNode;
+  child: ReactNode; 
   primaryColor?: Color;
   secondaryColor?: Color;
   bgColor?: Color;
+  fontFamily?: string; 
   themeType: "dark" | "light";
-  defaultRadius?: number; 
+  defaultRadius?: number;
 }
 
 const defaultColors = {
@@ -58,9 +59,14 @@ const defaultColors = {
   textLight: "#000",
 };
 
-const GlobalStyles = createGlobalStyle<{ bgColor: string }>`
+const GlobalStyles = createGlobalStyle<{
+  bgColor: string;
+  fontFamily?: string;
+}>`
   body {
     background-color: ${({ bgColor }) => bgColor};
+    font-family: ${({ fontFamily }) =>
+      fontFamily || "Verdana, Geneva, Tahoma, sans-serif"};
     transition: background-color 0.3s ease;
   }
   * {
@@ -75,8 +81,9 @@ const Theme: React.FC<ThemeProps> = ({
   primaryColor = defaultColors.primary,
   secondaryColor,
   bgColor,
+  fontFamily,
   themeType,
-  defaultRadius = 10, 
+  defaultRadius = 10,
 }) => {
   const theme = {
     dark: {
@@ -85,6 +92,7 @@ const Theme: React.FC<ThemeProps> = ({
       bg: bgColor || defaultColors.darkBg,
       text: defaultColors.textDark,
       radius: defaultRadius,
+      fontFamily: fontFamily,
     },
     light: {
       primary: primaryColor,
@@ -92,6 +100,7 @@ const Theme: React.FC<ThemeProps> = ({
       bg: bgColor || defaultColors.lightBg,
       text: defaultColors.textLight,
       radius: defaultRadius,
+      fontFamily: fontFamily,
     },
   };
 
