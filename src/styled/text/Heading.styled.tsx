@@ -43,7 +43,7 @@ interface HeadingProps {
   font?: string;
   weight?: string;
   align?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Heading: React.FC<HeadingProps> = (props) => {

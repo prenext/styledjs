@@ -41,11 +41,12 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Color } from "types/Color";
 
 interface ThemeProps {
-  child: ReactNode; 
+  child: ReactNode;
   primaryColor?: Color;
   secondaryColor?: Color;
   bgColor?: Color;
-  fontFamily?: string; 
+  shadowColor?: Color;
+  fontFamily?: string;
   themeType: "dark" | "light";
   defaultRadius?: number;
 }
@@ -57,6 +58,7 @@ const defaultColors = {
   lightBg: "#f4f4f4",
   textDark: "#fff",
   textLight: "#000",
+  shadowColor: "#0000005a"
 };
 
 const GlobalStyles = createGlobalStyle<{
@@ -81,8 +83,10 @@ const Theme: React.FC<ThemeProps> = ({
   primaryColor = defaultColors.primary,
   secondaryColor,
   bgColor,
+  shadowColor,
   fontFamily,
   themeType,
+
   defaultRadius = 10,
 }) => {
   const theme = {
@@ -93,6 +97,7 @@ const Theme: React.FC<ThemeProps> = ({
       text: defaultColors.textDark,
       radius: defaultRadius,
       fontFamily: fontFamily,
+      shadowColor: shadowColor || defaultColors.shadowColor,
     },
     light: {
       primary: primaryColor,
@@ -101,6 +106,7 @@ const Theme: React.FC<ThemeProps> = ({
       text: defaultColors.textLight,
       radius: defaultRadius,
       fontFamily: fontFamily,
+      shadowColor: shadowColor || defaultColors.shadowColor,
     },
   };
 
