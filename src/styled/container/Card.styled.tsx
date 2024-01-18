@@ -1,6 +1,55 @@
 import styled from "styled-components";
 import { Color } from "types/Color";
 
+/**
+ * Card Component
+ *
+ * A styled component representing a card with customizable styling options.
+ *
+ * @component
+ *
+ * @param {string} width - The width of the card. Defaults to "fit-content".
+ * @param {string} height - The height of the card. Defaults to "fit-content".
+ * @param {Color} shadowColor - The color of the card's shadow.
+ * @param {Color} bgColor - The background color of the card.
+ * @param {number} radius - The border radius of the card.
+ * @param {number} elevation - The elevation or depth of the card's shadow.
+ * @param {Object} padding - The padding of the card.
+ * @param {number} padding.all - Padding applied to all sides of the card.
+ * @param {Object} padding.only - Padding applied to specific sides of the card.
+ * @param {number} padding.only.l - Left padding of the card.
+ * @param {number} padding.only.r - Right padding of the card.
+ * @param {number} padding.only.t - Top padding of the card.
+ * @param {number} padding.only.b - Bottom padding of the card.
+ * @param {Object} padding.symmetric - Symmetric vertical and horizontal padding.
+ * @param {number} padding.symmetric.v - Vertical padding of the card.
+ * @param {number} padding.symmetric.h - Horizontal padding of the card.
+ * @param {Object} margin - The margin of the card.
+ * @param {number} margin.all - Margin applied to all sides of the card.
+ * @param {Object} margin.only - Margin applied to specific sides of the card.
+ * @param {number} margin.only.l - Left margin of the card.
+ * @param {number} margin.only.r - Right margin of the card.
+ * @param {number} margin.only.t - Top margin of the card.
+ * @param {number} margin.only.b - Bottom margin of the card.
+ * @param {Object} margin.symmetric - Symmetric vertical and horizontal margin.
+ * @param {number} margin.symmetric.v - Vertical margin of the card.
+ * @param {number} margin.symmetric.h - Horizontal margin of the card.
+ *
+ * @example
+ * <Card
+ *   width="300px"
+ *   height="200px"
+ *   bgColor="#ffffff"
+ *   shadowColor="#000000"
+ *   radius={10}
+ *   elevation={2}
+ *   padding={{ all: 16 }}
+ *   margin={{ all: 8 }}
+ * >
+ *   Content goes here
+ * </Card>
+ */
+
 interface CardProps {
   width?: string;
   height?: string;
