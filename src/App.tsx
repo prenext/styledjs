@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  Theme,
-} from "./index";
+import { Theme } from "./index";
 
 const App = () => {
   return (
@@ -9,11 +7,7 @@ const App = () => {
       themeType="dark"
       primaryColor="green"
       secondaryColor="lightGreen"
-      child={
-        <>
-          
-        </>
-      }
+      child={<></>}
     />
   );
 };

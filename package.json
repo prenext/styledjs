@@ -1,8 +1,14 @@
 {
-  "name": "styled-tsx",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@alidantech/styled-tsx",
+  "private": false,
+  "version": "1.0.2",
   "type": "module",
+  "description": "A simple React UI package with TypeScript and styled-components",
+  "main": "src/index.ts",
+  "author": {
+    "name": "Alidantech",
+    "email": "peteralidante254@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,10 +16,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
-    "@types/styled-components": "^5.1.34",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.1.0",
     "styled-components": "^6.1.8",
     "styled-theming": "^2.2.0"
   },

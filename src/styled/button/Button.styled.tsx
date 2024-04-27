@@ -15,7 +15,7 @@
  * `;
  *
  * @example
- * // Customizing the button color and radius
+ * //Customizing the button color and radius
  * const CustomButton = styled(StyledButton)`
  *   color: #ff5733; // Custom text color
  *   radius: 10; // Custom border-radius in pixels
